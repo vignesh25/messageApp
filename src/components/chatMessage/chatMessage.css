@@ -1,0 +1,14 @@
+.chatBackground {
+    background-color: #12243A;
+    color: white;
+    width: 99.5%;
+}
+
+.chatMessageBackground {
+    background: #ffffff;
+    height: 96vh;
+}
+
+.chatPage {
+    padding: 15px;
+}

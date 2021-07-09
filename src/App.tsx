@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { HashRouter, Route, Router, Switch } from 'react-router-dom';
+import chatMessage from './components/chatMessage';
+import contacts from './components/contacts/contacts';
+import history from './history';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router history={history}>
+        <div className="App-header">
+          <Switch>
+            <Route exact={true} path="/" component={chatMessage} />
+            <Route exact={true} path="/contacts" component={contacts} />
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
